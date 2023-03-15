@@ -1,0 +1,58 @@
+/* //---------Dashbord container----------// */
+.dashbord-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+.dashbord-item {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0px 0 1px rgb(10 10 10 / 2%);
+    /* Glass bg */
+    background: rgba(255, 255, 255, 0.61);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* Glass bg */
+
+}
+
+/* //---------End Dashbord container----------// */
+
+
+/* //---------// */
+
+
+@media (min-width:1440px) {
+    .dashbord-container {
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .dashbord-container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    .dashbord-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr max-content;
+    }
+}
+
+@media (max-width:425px) {
+    .dashbord-container {
+        padding: 0.5rem;
+    }
+
+    .medecin_container {
+        position: relative;
+    }
+}

@@ -1,0 +1,56 @@
+.medecin_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+
+
+.medecin_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+
+#Medecin_tab input {
+    /* background-color: transparent; */
+    width: 70%;
+    margin: 0.25rem;
+}
+
+#Medecin_tab {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+#Medecin_tab td,
+#Medecin_tab th {
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+th {
+    text-transform: uppercase;
+}
+
+td {
+    padding: 0.3rem !important;
+    text-align: center !important;
+    vertical-align: middle;
+}
+
+/* //==============// */
+
+.page-btns {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}

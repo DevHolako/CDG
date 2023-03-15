@@ -1,0 +1,21 @@
+/* Login page css */
+.main-login {
+    padding: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100dvh;
+}
+
+
+
+/* //---------small----------// */
+
+
+
+
+@media (max-width : 450px) {
+    .main-login {
+        flex-direction: column-reverse;
+    }
+}

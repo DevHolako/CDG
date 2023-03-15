@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+}
+
+#BaiscTable td,
+#BaiscTable th {
+    padding: .5em;
+    border: 1px solid #ddd;
+}
+
+th .tab-name {
+    display: flex;
+    gap: 0.9rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .tab {
+        max-height: 60vh;
+        display: block;
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width:426px) {
+    #Medecin_tab {
+        width: 150%;
+    }
+
+    .tbl-header tr th {
+        padding: 0.5rem 0.4rem;
+    }
+
+    th .tab-name {
+        font-size: 11px;
+        gap: 0.4rem;
+    }
+
+    td {
+        font-size: small !important;
+    }
+}
