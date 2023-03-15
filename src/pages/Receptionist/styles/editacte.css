@@ -7,23 +7,3 @@
 }
 
 .edit-item {}
-
-@media screen and (min-width:1900px) {
-    .edit-containre {
-        height: 80dvh;
-    }
-}
-
-@media (max-width: 1600px) {
-    .edit-containre {
-        margin-top: 5rem;
-    }
-
-}
-
-@media (max-width:1024px) {
-    .edit-containre {
-        margin-top: 1rem;
-    }
-
-}

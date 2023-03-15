@@ -1,11 +1,22 @@
 import React from "react";
-import SiedBar from "../components/SiedBar";
+import Header from "../components/Header";
+import "../styles/footer.css";
 function Layout({ children }) {
   return (
-    <div className="Layout">
-      <SiedBar />
-      <main>{children}</main>
-    </div>
+    <>
+      <header className="container">
+        <Header />
+      </header>
+      <main className="container">{children}</main>
+      <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+      </footer>
+    </>
   );
 }
 

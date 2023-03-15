@@ -4,14 +4,3 @@
     gap: 2rem;
     margin: 4rem 2rem 1rem 2rem;
 }
-
-
-@media (max-width:768px) {
-    .patients-container {
-        display: grid;
-        margin: 1rem;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr max-content;
-    }
-}

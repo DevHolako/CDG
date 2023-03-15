@@ -6,18 +6,19 @@ function NavBar_Receptionist() {
   return (
     <>
       <div className="nav_item">
-        <Link to="dashbord" className="button link-btn">
-          <img src={dash_ico} alt="dash_ico" />
+        <Link to="dashbord">
+          <img src={dash_ico} alt="dash_ico" className="nav-icon" />
         </Link>
-        <Link to="dashbord" className="button link-btn link-text">
+
+        <Link to="dashbord" className="nav-text">
           Dashbord
         </Link>
       </div>
       <div className="nav_item">
-        <Link to="patients" className="button link-btn">
-          <img src={users_ico} alt="users_ico" />
+        <Link to="patients">
+          <img src={users_ico} alt="users_ico" className="nav-icon" />
         </Link>
-        <Link to="patients" className="button link-btn link-text">
+        <Link to="patients" className="nav-text">
           Patients
         </Link>
       </div>

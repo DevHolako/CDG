@@ -10,12 +10,3 @@
 
 
 /* //---------small----------// */
-
-
-
-
-@media (max-width : 450px) {
-    .main-login {
-        flex-direction: column-reverse;
-    }
-}
