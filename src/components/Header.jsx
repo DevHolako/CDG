@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import NavBar_Receptionist from "./navbar_receptionist";
 // icons
 import logo from "../assets/logo-removebg.png";
-import sales_ico from "../assets/asied/sales.svg";
 import settings_ico from "../assets/asied/settings.svg";
 import logout_ico from "../assets/asied/logout.svg";
 // icons

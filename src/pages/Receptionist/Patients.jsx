@@ -6,7 +6,7 @@ import "./styles/patients.css";
 function Patients() {
   return (
     <>
-      <div className="patients-container dashbord-item">
+      <div className="container dashbord-item">
         <h1 className="title">List Patients</h1>
         <BaiscTable Operation={true} inc_data={data} inc_cols={columnes} />
       </div>

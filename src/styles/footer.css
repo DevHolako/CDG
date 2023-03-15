@@ -1,17 +1,16 @@
 .footer {
     position: relative;
-    background: #05b3a4;
-    padding: 1px;
-    margin-top: 8%;
+    /* background: #05b3a4; */
+    /* padding: 10px 50px; */
+
 }
 
 .wave {
     position: absolute;
-    top: -100px;
     left: 0;
     width: 100%;
     height: 100px;
-    background: url("https://i.imgur.com/ZAts69f.png");
+    background: url("../assets/wave.png");
     background-size: 1000px 100px;
 }
 

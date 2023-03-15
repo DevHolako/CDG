@@ -1,14 +1,29 @@
-table {
-    width: 100%;
-}
-
-#BaiscTable td,
-#BaiscTable th {
-    padding: .5em;
-    border: 1px solid #ddd;
-}
-
-th .tab-name {
+/* Medecin table */
+.medecin-table {
     display: flex;
-    gap: 0.9rem;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.tab-name {
+    font-weight: 700;
+    display: flex;
+    gap: 1em;
+}
+
+.is-table tr td,
+.is-table tr th {
+    padding: .2em 3em;
+    border: 1px solid black;
+}
+
+
+/* Medecin table */
+
+@media screen and (max-width : 768px) {
+    .is-table {
+        display: block;
+        overflow: scroll;
+    }
+
 }

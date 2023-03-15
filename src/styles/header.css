@@ -13,7 +13,7 @@
 .nav-bar {
     margin: 0 auto;
     display: flex;
-    gap: 1em;
+    gap: 2em;
     align-items: center;
 }
 
@@ -22,14 +22,12 @@
 .settings {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 }
 
 .nav_item,
 .setting_item {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 1em;
 }
 
@@ -38,20 +36,22 @@
 }
 
 .nav-icon {
-    width: 20px;
+    width: 30px;
 }
 
-@media screen and (max-width : 768px) {
-    .nav-text {
+@media screen and (max-width : 900px) {
+
+    .nav-text,
+    .logo {
         display: none;
         visibility: none;
     }
 
-    .nav-icon {
-        width: 30px;
+    .aside-bar {
+        justify-content: space-around;
     }
 
-    .logo {
-        width: 25%;
+    .nav-bar {
+        margin: 0;
     }
 }

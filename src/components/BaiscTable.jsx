@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useTable, useSortBy, useFilters, usePagination } from "react-table";
-import { ColFilter } from "./ColFilter";
+import { ColFilter } from "./InputFilter";
 function BaiscTable({ Operation, inc_data, inc_cols }) {
   const columns = useMemo(() => inc_cols, []);
   const data = useMemo(() => inc_data, []);
@@ -39,7 +39,7 @@ function BaiscTable({ Operation, inc_data, inc_cols }) {
   return (
     <>
       <div className="tab">
-        <table id="BaiscTable" {...getTableProps()}>
+        <table className="is-table" {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>

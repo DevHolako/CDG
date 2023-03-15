@@ -1,8 +1,7 @@
 /* //---------Dashbord container----------// */
 .dashbord-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .dashbord-item {
@@ -20,7 +19,23 @@
 
 }
 
+.section1 {
+    flex: 1 1;
+}
+
+.section2 {
+    flex: 3 1;
+}
+
 /* //---------End Dashbord container----------// */
 
 
 /* //---------// */
+
+
+@media screen and (max-width: 900px) {
+    .dashbord-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
