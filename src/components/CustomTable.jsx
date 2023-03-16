@@ -6,7 +6,12 @@ import "../styles/tables.css";
 import { useTable, useSortBy, useFilters, usePagination } from "react-table";
 import { ColFilter } from "./InputFilter";
 
-function CustomTable({ inc_data, inc_cols }) {
+function CustomTable({
+  inc_data,
+  inc_cols,
+  isPatient = false,
+  isMedecin = false,
+}) {
   const columns = useMemo(() => inc_cols, []);
   const data = useMemo(() => inc_data, []);
   const defaultColumn = useMemo(() => {
@@ -40,14 +45,17 @@ function CustomTable({ inc_data, inc_cols }) {
   } = instance;
   const { pageIndex } = state;
   return (
-    <div div className="medecin-table">
+    <div className="medecin-table">
       <table className="is-table" {...getTableProps()}>
         <thead className="tbl-header">
-          {headerGroups.map((headerGroup) => (
-            <tr className="" {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
+          {headerGroups.map((headerGroup, index) => (
+            <tr key={index} {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column, index) => (
                 <>
-                  <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  <th
+                    key={index}
+                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                  >
                     <div className="tab-name">
                       {column.render("Header")}
                       <span>
@@ -62,7 +70,6 @@ function CustomTable({ inc_data, inc_cols }) {
                   </th>
                 </>
               ))}
-
               {isPatient && (
                 <>
                   <th colSpan="1" role="columnheader">
@@ -78,7 +85,7 @@ function CustomTable({ inc_data, inc_cols }) {
                 </>
               )}
               {isMedecin && (
-                <th colspan="1" role="columnheader">
+                <th colSpan="1" role="columnheader">
                   <div className="tab-headers">
                     <div className="label tab-name">Détail</div>
                   </div>
@@ -93,9 +100,11 @@ function CustomTable({ inc_data, inc_cols }) {
             const id = row.values.id;
             return (
               <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => {
+                {row.cells.map((cell, index) => {
                   return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                    <td key={index} {...cell.getCellProps()}>
+                      {cell.render("Cell")}
+                    </td>
                   );
                 })}
                 {isMedecin && (

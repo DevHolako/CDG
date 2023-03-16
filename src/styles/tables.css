@@ -17,13 +17,9 @@
     border: 1px solid black;
 }
 
+.is-table {
+    display: block;
+    overflow: scroll;
+}
 
 /* Medecin table */
-
-@media screen and (max-width : 768px) {
-    .is-table {
-        display: block;
-        overflow: scroll;
-    }
-
-}

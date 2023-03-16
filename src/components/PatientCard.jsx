@@ -13,8 +13,6 @@ function PatientCard({ method, target }) {
       setPatient(target);
     }
   }, [target]);
-  console.log("target", target);
-  console.log("patient", patient);
   return (
     <>
       <div className="field">

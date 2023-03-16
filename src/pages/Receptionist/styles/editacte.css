@@ -2,8 +2,6 @@
     margin: 1rem;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+
 
 .edit-item {}

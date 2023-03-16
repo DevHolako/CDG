@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "../../assets/centre-dentaire-logo.svg";
 import image from "../../assets/login.svg";
 import "./styles/login.css";
 import { useNavigate } from "react-router-dom";
 function Login() {
   const GoTo = useNavigate();
   const HandelLogin = () => {
-    GoTo("/receptionist");
+    GoTo("/réceptionniste");
   };
   return (
     <>

@@ -6,11 +6,11 @@ function NavBar_Receptionist() {
   return (
     <>
       <div className="nav_item">
-        <Link to="dashbord">
+        <Link to="/réceptionniste">
           <img src={dash_ico} alt="dash_ico" className="nav-icon" />
         </Link>
 
-        <Link to="dashbord" className="nav-text">
+        <Link to="/réceptionniste" className="nav-text">
           Dashbord
         </Link>
       </div>

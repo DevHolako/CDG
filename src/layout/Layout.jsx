@@ -1,12 +1,15 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
-function Layout({ children }) {
+function Layout() {
   return (
     <>
       <header className="container">
         <Header />
       </header>
-      <main className="container testing">{children}</main>
+      <main className="container testing">
+        <Outlet />
+      </main>
     </>
   );
 }

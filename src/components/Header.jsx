@@ -25,10 +25,10 @@ function Header() {
         </nav>
         <div className="settings">
           <div className="setting_item">
-            <Link to="settings">
+            <Link to="setting">
               <img src={settings_ico} alt="settings_ico" className="nav-icon" />
             </Link>
-            <Link to="settings" className="nav-text">
+            <Link to="setting" className="nav-text">
               Settings
             </Link>
           </div>
