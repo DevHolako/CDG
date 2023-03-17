@@ -15,78 +15,43 @@ function PatientCard({ method, target }) {
   }, [target]);
   return (
     <>
-      <div className="field">
-        <label className="label">Nom</label>
-        <div className="control">
-          <input
-            className="input"
-            type="text"
-            placeholder="Nom"
-            value={patient.nom}
-            onChange={(e) => {
-              setPatient({ ...patient, nom: e.target.value });
-            }}
-          />
-        </div>
-      </div>
-      <div className="field">
-        <label className="label">Prenom</label>
-        <div className="control">
-          <input
-            className="input"
-            type="text"
-            placeholder="Prenom"
-            value={patient.prenom}
-            onChange={(e) => {
-              setPatient({ ...patient, prenom: e.target.value });
-            }}
-          />
-        </div>
-      </div>
+      <div class="container">
+        <div class="custom_card shadow">
+          <h2 class="card_title">
+            {method == "ajouter" ? "Ajouter une nouveau acte" : ""}
+          </h2>
 
-      <div className="field">
-        <label className="label">Acte</label>
-        <div className="control">
-          <textarea
-            className="textarea"
-            placeholder="Textarea"
-            value={patient.acte}
-            onChange={(e) => {
-              setPatient({ ...patient, prenom: e.target.value });
-            }}
-          ></textarea>
-        </div>
-      </div>
-
-      <div className="field">
-        <label className="label">Montant</label>
-        <div className="control">
-          <input
-            className="input"
-            type="number"
-            placeholder="Montant"
-            value={patient.montant}
-            onChange={(e) => {
-              setPatient({ ...patient, montant: e.target.value });
-            }}
-          />
-        </div>
-      </div>
-      <div className="field ">
-        <label className="label">Type de paiement</label>
-        <div className="control is-expanded">
-          <div className="select is-fullwidth">
-            <select>
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
+          <div class="inputBox">
+            <input type="text" required="required" />
+            <span class="user">Nom</span>
           </div>
-        </div>
-      </div>
+          <div class="inputBox">
+            <input type="text" required="required" />
+            <span class="user">Prenom</span>
+          </div>
 
-      <div className="field is-grouped is-grouped-centered">
-        <div className="control">
-          <button className="button btn is-info  ">{method}</button>
+          <div class="inputBox">
+            <input type="text" required="required" />
+            <span>Acte</span>
+          </div>
+
+          <div class="inputBox">
+            <input type="text" required="required" />
+            <span>Montan</span>
+          </div>
+
+          <div class="inputBox">
+            <select>
+              <optgroup label="Method">
+                <option value="">card</option>
+                <option value="">chéque</option>
+                <option value="">espace</option>
+              </optgroup>
+            </select>
+            <span>method</span>
+          </div>
+
+          <button class="enter">Modifier</button>
         </div>
       </div>
     </>

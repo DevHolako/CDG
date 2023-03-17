@@ -10,10 +10,10 @@ import CustomTable from "../../components/CustomTable";
 function Dashbord() {
   return (
     <div className="dashbord-container">
-      <section className="dashbord-item section1">
-        <PatientCard method={"Ajouter"} />
+      <section className="section1 ">
+        <PatientCard method={"ajouter"} />
       </section>
-      <section className="dashbord-item section2">
+      <section className="section2 shadow">
         <div className="medecin_container container">
           <h2 className="title is-4 rece-title">RECETTE MEDECIN</h2>
           <CustomTable inc_data={data} inc_cols={columnes} isMedecin={true} />
