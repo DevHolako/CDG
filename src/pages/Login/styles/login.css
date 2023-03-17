@@ -3,6 +3,9 @@
     padding: 2.8rem;
     display: flex;
     flex-direction: column-reverse;
+    background-image: url("../../../assets/svg/bg.svg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: center;
     justify-content: space-evenly;
     height: 100dvh;

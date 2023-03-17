@@ -6,8 +6,8 @@ import CustomTable from "../../components/CustomTable";
 function Patients() {
   return (
     <>
-      <div className="patients-container dashbord-item">
-        <h1 className="title">List Patients</h1>
+      <div className="container patients_contanier ">
+        <h1 className="card_title">List Patients</h1>
         <CustomTable inc_data={data} inc_cols={columnes} isPatient={true} />
       </div>
     </>

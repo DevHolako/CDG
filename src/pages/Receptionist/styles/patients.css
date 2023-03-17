@@ -1,3 +1,8 @@
-.patients-container {
-    padding: 2em;
+.patients_contanier {
+    padding: 2em !important;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
 }
