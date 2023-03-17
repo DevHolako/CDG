@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/tables.css";
 
 import { useTable, useSortBy, useFilters, usePagination } from "react-table";
+
 import { ColFilter } from "./InputFilter";
 
 function CustomTable({
@@ -48,14 +49,11 @@ function CustomTable({
     <div className="medecin-table">
       <table className="is-table" {...getTableProps()}>
         <thead className="tbl-header">
-          {headerGroups.map((headerGroup, index) => (
-            <tr key={index} {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column, index) => (
+          {headerGroups.map((headerGroup) => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column) => (
                 <>
-                  <th
-                    key={index}
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
-                  >
+                  <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                     <div className="tab-name">
                       {column.render("Header")}
                       <span>
@@ -72,12 +70,12 @@ function CustomTable({
               ))}
               {isPatient && (
                 <>
-                  <th colSpan="1" role="columnheader">
+                  <th colSpan={1} role="columnheader">
                     <div className="tab-headers">
                       <div className="label tab-name"> Consultation</div>
                     </div>
                   </th>
-                  <th colSpan="1" role="columnheader">
+                  <th colSpan={1} role="columnheader">
                     <div className="tab-headers">
                       <div className="label tab-name"> Suppression</div>
                     </div>
@@ -85,7 +83,7 @@ function CustomTable({
                 </>
               )}
               {isMedecin && (
-                <th colSpan="1" role="columnheader">
+                <th colSpan={1} role="columnheader">
                   <div className="tab-headers">
                     <div className="label tab-name">Détail</div>
                   </div>
@@ -100,11 +98,9 @@ function CustomTable({
             const id = row.values.id;
             return (
               <tr {...row.getRowProps()}>
-                {row.cells.map((cell, index) => {
+                {row.cells.map((cell) => {
                   return (
-                    <td key={index} {...cell.getCellProps()}>
-                      {cell.render("Cell")}
-                    </td>
+                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
                   );
                 })}
                 {isMedecin && (
@@ -122,7 +118,7 @@ function CustomTable({
                     <td>
                       <Link
                         className="button is-info"
-                        to={`/receptionist/edit/${id}`}
+                        to={`/réceptionniste/edit/${id}`}
                       >
                         modifier
                       </Link>

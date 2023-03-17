@@ -2,11 +2,17 @@
 .main-login {
     padding: 2.8rem;
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-evenly;
     height: 100dvh;
 }
 
 
+/* //-------------------// */
 
-/* //---------small----------// */
+@media screen and (min-width:768px) {
+    .main-login {
+        flex-direction: row;
+    }
+}

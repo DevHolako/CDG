@@ -3,6 +3,7 @@ import Settings from "../components/Settings";
 import Layout from "../layout/Layout";
 import Login from "../pages/Login/Login";
 import Dashbord from "../pages/Receptionist/Dashbord";
+import Modifier, { GetPatient } from "../pages/Receptionist/Modifier";
 import Patients from "../pages/Receptionist/Patients";
 
 export const router = createBrowserRouter([
@@ -25,6 +26,11 @@ export const router = createBrowserRouter([
       {
         path: "setting",
         element: <Settings />,
+      },
+      {
+        path: "edit/:id",
+        element: <Modifier />,
+        loader: GetPatient,
       },
     ],
   },

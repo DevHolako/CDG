@@ -59,6 +59,8 @@ a {
 }
 
 
+
+
 /* custom card css  */
 .card_title {
     color: #000;
@@ -90,8 +92,7 @@ a {
 }
 
 .inputBox input,
-.inputBox select,
-.inputBox textarea {
+.inputBox select {
     width: 100%;
     padding: 10px;
     outline: none;
@@ -109,7 +110,7 @@ a {
     margin-top: 5px;
     position: absolute;
     left: 0;
-    transform: translateY(-10px);
+    transform: translateY(-13px);
     margin-left: 10px;
     padding: 10px;
     pointer-events: none;
@@ -122,8 +123,6 @@ a {
 }
 
 .inputBox input:valid~span,
-.inputBox textarea:valid~span,
-.inputBox textarea:focus~span,
 .inputBox select:valid~span,
 .inputBox select:focus~span,
 .inputBox input:focus~span {
@@ -140,12 +139,12 @@ a {
 .inputBox input:valid,
 .inputBox input:focus,
 .inputBox select:valid,
-.inputBox select:focus,
-.inputBox textarea:valid,
-.inputBox textarea:focus {
+.inputBox select:focus {
     border: 2px solid #000;
     border-radius: 8px;
 }
+
+
 
 .enter {
     height: 45px;

@@ -23,4 +23,19 @@
     overflow: scroll;
 }
 
+
+.inputFilter {
+    outline: none;
+    margin: 1em 0;
+    text-align: center;
+    border: none;
+    color: #000;
+    font-size: 1em;
+    background: transparent;
+    border: 1px dashed #000;
+    transition: 0.1s;
+    border-radius: 8px;
+
+}
+
 /* Medecin table */
