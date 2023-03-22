@@ -26,7 +26,7 @@ const PatientCard: React.FC<PatientCardProps> = ({ targetPatient, method }) => {
   });
 
   const Title =
-    method === "ajouter" ? "Ajouter un nouveau acte" : "Modifier Acte";
+    method === "ajouter" ? "AJOUTER UN NOUVEAU ACTE" : "MODIFIER UN ACTE";
  
 
   const handleSubmit = () => {

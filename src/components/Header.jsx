@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
-import { useAtom } from "jotai";
-import { roleAtom } from "../App";
+import { useAtomValue } from "jotai";
+import { Role } from "../App";
 import { useNavigate } from "react-router-dom";
 import NavBar_Receptionist from "./navbar_receptionist";
 // icons
@@ -11,7 +11,7 @@ import settings_ico from "../assets/asied/settings.svg";
 import logout_ico from "../assets/asied/logout.svg";
 // icons
 function Header() {
-  const [role] = useAtom(roleAtom);
+  const role = useAtomValue(Role);
   const goTo = useNavigate();
   const logout = () => {
     goTo("/");
@@ -21,7 +21,7 @@ function Header() {
       <aside className="aside-bar">
         <img src={logo} alt="logo" id="logo" className="logo" />
         <nav className="nav-bar">
-          {role == "rece" ? <NavBar_Receptionist /> : <></>}
+          {role == "réceptionniste" ? <NavBar_Receptionist /> : <></>}
         </nav>
         <div className="settings">
           <div className="setting_item">

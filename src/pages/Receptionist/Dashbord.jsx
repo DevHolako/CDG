@@ -1,9 +1,9 @@
 import React from "react";
 import PatientCard from "../../components/PatientCard";
-import "./styles/dashbord.css";
 import data from "../../Data/dock-data.json";
 import { columnes } from "../../Data/Recette";
 import CustomTable from "../../components/CustomTable";
+import "./styles/dashbord.css";
 
 //------------------------------------------//
 

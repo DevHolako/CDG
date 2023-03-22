@@ -7,6 +7,8 @@ import { useTable, useSortBy, useFilters, usePagination } from "react-table";
 
 import { ColFilter } from "./InputFilter";
 
+import trash from "../assets/svg/trash.svg";
+
 function CustomTable({
   inc_data,
   inc_cols,
@@ -105,10 +107,7 @@ function CustomTable({
                 })}
                 {isMedecin && (
                   <td>
-                    <Link
-                      to={`/doc/${id}`}
-                      className="button is-info btn-medecin"
-                    >
+                    <Link to={`/doc/${id}`} className="custom-btn ">
                       Details
                     </Link>
                   </td>
@@ -117,14 +116,16 @@ function CustomTable({
                   <>
                     <td>
                       <Link
-                        className="button is-info"
+                        className="custom-btn btn-info"
                         to={`/réceptionniste/edit/${id}`}
                       >
                         modifier
                       </Link>
                     </td>
                     <td>
-                      <button className="button is-danger">suprimer</button>
+                      <button>
+                        <img src={trash} alt="supprimer" />
+                      </button>
                     </td>
                   </>
                 )}
@@ -140,7 +141,7 @@ function CustomTable({
         <div className="field is-grouped">
           <p className="control">
             <button
-              className="button is-link "
+              className="custom-btn"
               onClick={() => previousPage()}
               disabled={!canPreviousPage}
             >
@@ -149,7 +150,7 @@ function CustomTable({
           </p>
           <p className="control">
             <button
-              className="button is-link"
+              className="custom-btn"
               onClick={() => nextPage()}
               disabled={!canNextPage}
             >
