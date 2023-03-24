@@ -4,7 +4,7 @@ import "../styles/header.css";
 import { useAtomValue } from "jotai";
 import { Role } from "../App";
 import { useNavigate } from "react-router-dom";
-import NavBar_Receptionist from "./navbar_receptionist";
+import NavBar_Receptionist from "./Navbar_Receptionist";
 // icons
 import logo from "../assets/logo-removebg.png";
 import settings_ico from "../assets/asied/settings.svg";
