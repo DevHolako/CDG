@@ -7,8 +7,6 @@ import { useTable, useSortBy, useFilters, usePagination } from "react-table";
 
 import { ColFilter } from "./InputFilter";
 
-import trash from "../assets/svg/trash.svg";
-
 function CustomTable({
   inc_data,
   inc_cols,
@@ -107,7 +105,7 @@ function CustomTable({
                 })}
                 {isMedecin && (
                   <td>
-                    <Link to={`/doc/${id}`} className="custom-btn ">
+                    <Link to={`doc/${id}`} className="custom-btn ">
                       Details
                     </Link>
                   </td>

@@ -1,3 +1,5 @@
+import doc_data from "../Data/dock-data.json";
+
 export const columnes = [
   {
     Header: "Id",
@@ -9,13 +11,22 @@ export const columnes = [
     Header: "Nom",
     accessor: "nom",
     disableFilters: false,
-    disableSortBy: true,
+    disableSortBy: false,
   },
   {
     Header: "Prénom",
     accessor: "prenom",
     disableFilters: false,
-    disableSortBy: true,
+    disableSortBy: false,
+  },
+  {
+    Header: "Doctor",
+    accessor: (row) => {
+      const doc = doc_data.find((obj) => obj.id === row["id_doc"]);
+      return doc.fullname;
+    },
+    disableFilters: false,
+    disableSortBy: false,
   },
   {
     Header: "Acte",
