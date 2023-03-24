@@ -123,9 +123,10 @@ function CustomTable({
                       </Link>
                     </td>
                     <td>
-                      <button>
-                        <img src={trash} alt="supprimer" />
-                      </button>
+                      <img
+                        src="https://img.icons8.com/fluency-systems-regular/48/000000/trash.png"
+                        alt="supprimer"
+                      />
                     </td>
                   </>
                 )}
