@@ -6,7 +6,8 @@ import { router } from "./Routes/Route";
 export const Role = atom("réceptionniste");
 
 function App() {
-  return <RouterProvider router={router} />;
+
+	return <RouterProvider router={router} />;
 }
 
 export default App;
