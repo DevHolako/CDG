@@ -47,7 +47,7 @@ function CustomTable({
   const { pageIndex } = state;
   return (
     <div className="medecin-table">
-      <table className="is-table" {...getTableProps()}>
+      <table className="is-table " {...getTableProps()}>
         <thead className="tbl-header">
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -71,22 +71,16 @@ function CustomTable({
               {isPatient && (
                 <>
                   <th colSpan={1} role="columnheader">
-                    <div className="tab-headers">
-                      <div className="label tab-name"> Consultation</div>
-                    </div>
+                    <div className="tab-name">Consultation</div>
                   </th>
                   <th colSpan={1} role="columnheader">
-                    <div className="tab-headers">
-                      <div className="label tab-name"> Suppression</div>
-                    </div>
+                    <div className="tab-name">Suppression</div>
                   </th>
                 </>
               )}
               {isMedecin && (
                 <th colSpan={1} role="columnheader">
-                  <div className="tab-headers">
-                    <div className="label tab-name">Détail</div>
-                  </div>
+                  <div className="tab-name">Détail</div>
                 </th>
               )}
             </tr>

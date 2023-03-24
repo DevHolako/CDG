@@ -11,17 +11,45 @@
     gap: 1em;
 }
 
+
+
+
 .is-table tr td,
 .is-table tr th {
-    padding: .2em 3em;
-    border: 2px solid #000;
+    border: 1px solid #cccccc;
+    padding: 1em;
 }
 
-.is-table {
-    width: 100%;
-    display: block;
-    overflow: scroll;
+
+.is-table th {
+    --colth: #fff;
+    font-family: Lato-Bold;
+    font-size: 14px;
+    color: var(--colth);
+    line-height: 1.4;
+    background-color: #6c7ae0;
 }
+
+.is-table td {
+    font-size: 15px;
+    color: gray;
+    line-height: 1.4;
+
+
+}
+
+
+
+.is-table {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto !important;
+    border-collapse: collapse;
+    color: #666666;
+}
+
+
 
 
 .inputFilter {
@@ -29,9 +57,9 @@
     margin: 1em 0;
     text-align: center;
     border: none;
-    color: #000;
+    color: #000 !important;
     font-size: 1em;
-    background: transparent;
+    background: beige;
     border: 1px dashed #000;
     transition: 0.1s;
     border-radius: 8px;
@@ -39,31 +67,6 @@
 
 
 
-
-table {
-    border-collapse: collapse;
-    font-size: 14px;
-}
-
-th,
-td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #f2f2f2;
-    color: #444;
-}
-
-tbody {
-    /* background-color: #fff; */
-}
-
-tr:hover {
-    background-color: #f5f5f5;
-}
 
 
 
@@ -118,4 +121,12 @@ tr:hover {
 .custom-btn:hover::before {
     top: -30px;
     left: -30px;
+}
+
+@media screen and (max-width:500px) {
+
+    .is-table th,
+    .is-table td {
+        font-size: 17px;
+    }
 }
