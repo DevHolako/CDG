@@ -4,7 +4,7 @@ import "../styles/header.css";
 import { useAtomValue } from "jotai";
 import { Role } from "../App";
 import { useNavigate } from "react-router-dom";
-import NavBar_Receptionist from "./Navbar_Receptionist";
+import NBReceptionist from "./NBReceptionist";
 // icons
 import logo from "../assets/logo-removebg.png";
 import settings_ico from "../assets/asied/settings.svg";
@@ -21,7 +21,7 @@ function Header() {
       <aside className="aside-bar">
         <img src={logo} alt="logo" id="logo" className="logo" />
         <nav className="nav-bar">
-          {role == "réceptionniste" ? <NavBar_Receptionist /> : <></>}
+          {role == "réceptionniste" ? <NBReceptionist /> : <></>}
         </nav>
         <div className="settings">
           <div className="setting_item">

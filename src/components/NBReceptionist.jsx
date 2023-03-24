@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import dash_ico from "../assets/asied/dashbord.svg";
 import users_ico from "../assets/asied/users.svg";
-function NavBar_Receptionist() {
+function NBReceptionist() {
   return (
     <>
       <div className="nav_item">
@@ -26,4 +26,4 @@ function NavBar_Receptionist() {
   );
 }
 
-export default NavBar_Receptionist;
+export default NBReceptionist;
