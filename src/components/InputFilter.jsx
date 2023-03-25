@@ -7,7 +7,7 @@ export function ColFilter({ column }) {
       className="inputFilter"
       type="text"
       value={filterValue || ""}
-      placeholder={`${column.Header} ...`}
+      placeholder={`  ${column.Header} ...`}
       onChange={(e) => setFilter(e.target.value)}
     />
   );

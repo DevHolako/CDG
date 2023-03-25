@@ -10,15 +10,11 @@ import "./styles/dashbord.css";
 function Dashbord() {
   return (
     <div className="dashbord-container">
-      <section className="section1 ">
-        <PatientCard method={"ajouter"} />
-      </section>
-      <section className="section2 shadow">
-        <div className="medecin_container container">
-          <h2 className="title is-4 rece-title">RECETTE MEDECIN</h2>
-          <CustomTable inc_data={data} inc_cols={columnes} isMedecin={true} />
-        </div>
-      </section>
+      <PatientCard method={"ajouter"} />
+      <div className="bg section2">
+        <h2 className="title is-3">RECETTE MEDECIN</h2>
+        <CustomTable inc_data={data} inc_cols={columnes} isMedecin={true} />
+      </div>
     </div>
   );
 }

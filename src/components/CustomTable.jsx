@@ -46,8 +46,8 @@ function CustomTable({
   } = instance;
   const { pageIndex } = state;
   return (
-    <div className="medecin-table">
-      <table className="is-table " {...getTableProps()}>
+    <div className="table-container">
+      <table className="is-table" {...getTableProps()}>
         <thead className="tbl-header">
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>

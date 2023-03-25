@@ -1,19 +1,13 @@
-.patients_contanier {
-    padding: 1em !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(30px);
-    position: relative !important;
-    display: flex;
-    flex-direction: column;
+.pt-contanier {
+    padding: 2em;
+
 }
 
 
 
 @media screen and (min-width:1200px) {
 
-    .patients_contanier {
+    .pt-contanier {
         align-items: center;
     }
 }

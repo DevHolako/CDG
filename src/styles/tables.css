@@ -1,53 +1,42 @@
 /* Medecin table  */
-.medecin-table {
+.table-container {
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 2em;
+}
+
+.is-table {
+    overflow: auto !important;
+    font-size: 17px;
 }
 
 .tab-name {
-    font-weight: 700;
+    font-weight: 900;
     display: flex;
     gap: 1em;
 }
 
-
-
-
 .is-table tr td,
 .is-table tr th {
-    border: 1px solid #cccccc;
+    border: 2px solid #cccccc;
     padding: 1em;
 }
 
 
 .is-table th {
-    --colth: #fff;
-    font-family: Lato-Bold;
-    font-size: 14px;
-    color: var(--colth);
-    line-height: 1.4;
+    color: #000;
+    font-weight: 600;
+    line-height: 1;
     background-color: #6c7ae0;
+    background-color: rgb(235, 235, 235);
 }
 
 .is-table td {
-    font-size: 15px;
-    color: gray;
-    line-height: 1.4;
-
-
+    color: #000;
+    font-weight: 400;
+    line-height: 1;
 }
 
-
-
-.is-table {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    overflow: auto !important;
-    border-collapse: collapse;
-    color: #666666;
-}
 
 
 
@@ -55,14 +44,11 @@
 .inputFilter {
     outline: none;
     margin: 1em 0;
-    text-align: center;
+    padding: .3em;
     border: none;
     color: #000 !important;
-    font-size: 1em;
-    background: beige;
-    border: 1px dashed #000;
     transition: 0.1s;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 

@@ -5,16 +5,14 @@ import "./styles/patients.css";
 import CustomTable from "../../components/CustomTable";
 function Patients() {
   return (
-    <>
-      <div className="container patients_contanier">
-        <h1 className="card_title mb-5">List Patients</h1>
-        <div className="arrows">
-          <div className="scroll-left-arrow"></div>
-          <div className="scroll-rghit-arrow"></div>
-        </div>
-        <CustomTable inc_data={data} inc_cols={columnes} isPatient={true} />
+    <div className="pt-contanier bg">
+      <h1 className="title is-2 is-center">List Patients</h1>
+      <div className="arrows">
+        <div className="scroll-left-arrow"></div>
+        <div className="scroll-rghit-arrow"></div>
       </div>
-    </>
+      <CustomTable inc_data={data} inc_cols={columnes} isPatient={true} />
+    </div>
   );
 }
 
