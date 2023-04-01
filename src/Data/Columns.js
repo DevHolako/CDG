@@ -22,7 +22,7 @@ export const columnes = [
   {
     Header: "Doctor",
     accessor: (row) => {
-      const doc = doc_data.find((obj) => obj.id === row["id_doc"]);
+      const doc = doc_data.find((obj) => obj.id === row["doc_id"]);
       return doc.fullname;
     },
     disableFilters: false,

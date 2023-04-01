@@ -5,6 +5,7 @@ import "../styles/tables.css";
 
 import { useTable, useSortBy, useFilters, usePagination } from "react-table";
 
+import { deleteActe } from "../helpers/DeleteActe";
 import { ColFilter } from "./InputFilter";
 
 function CustomTable({
@@ -99,7 +100,7 @@ function CustomTable({
                 })}
                 {isMedecin && (
                   <td>
-                    <Link to={`doc/${id}`} className="custom-btn ">
+                    <Link to={`doc/${id}`} className="custom-btn  btn-info">
                       Details
                     </Link>
                   </td>
@@ -108,17 +109,20 @@ function CustomTable({
                   <>
                     <td>
                       <Link
-                        className="custom-btn btn-info"
+                        className="custom-btn btn-edit"
                         to={`/réceptionniste/edit/${id}`}
                       >
-                        modifier
+                        Modifier
                       </Link>
                     </td>
                     <td>
-                      <img
-                        src="https://img.icons8.com/fluency-systems-regular/48/000000/trash.png"
-                        alt="supprimer"
-                      />
+                      <Link
+                        className="custom-btn btn-danger"
+                        to=""
+                        onClick={() => deleteActe(id)}
+                      >
+                        Delete
+                      </Link>
                     </td>
                   </>
                 )}
@@ -134,7 +138,7 @@ function CustomTable({
         <div className="field is-grouped">
           <p className="control">
             <button
-              className="custom-btn"
+              className="custom-btn btn-default"
               onClick={() => previousPage()}
               disabled={!canPreviousPage}
             >
@@ -143,7 +147,7 @@ function CustomTable({
           </p>
           <p className="control">
             <button
-              className="custom-btn"
+              className="custom-btn  btn-default"
               onClick={() => nextPage()}
               disabled={!canNextPage}
             >

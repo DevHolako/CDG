@@ -8,48 +8,36 @@
 .is-table {
     display: block;
     overflow: auto !important;
-    font-size: 17px;
 }
 
 .tab-name {
-    font-weight: 900;
     display: flex;
     gap: 1em;
 }
 
 .is-table tr td,
 .is-table tr th {
-    border: 2px solid #cccccc;
+    border: 2px dashed #cccccc;
     padding: 1em;
 }
 
 
 .is-table th {
     color: #000;
-    font-weight: 600;
-    line-height: 1;
-    background-color: #6c7ae0;
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(235, 235, 235, .7);
 }
 
 .is-table td {
     color: #000;
     font-weight: 400;
-    line-height: 1;
+    line-height: .9;
 }
 
-
-
-
-
 .inputFilter {
-    outline: none;
-    margin: 1em 0;
-    padding: .3em;
+    outline: solid 0.7px;
+    padding: .4em;
     border: none;
-    color: #000 !important;
-    transition: 0.1s;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 
@@ -60,49 +48,57 @@
 
 
 .custom-btn {
-    --color: #5d7693;
+    --color: #274060;
     font-family: inherit;
     display: inline-block;
     width: max-content;
-    height: max-content;
     overflow: hidden;
     margin: 0 auto;
-    padding: .5em;
-    font-size: 16px;
+    padding: .6em;
+    font-size: 17px;
     z-index: 1;
     color: var(--color);
     border: 2px solid var(--color);
-    border-radius: 6px;
+    border-radius: 5px;
     position: relative;
 }
 
-.btn-info {
-    --color: #7bb3f3;
 
+
+.btn-info {
+    --color: #0D98BA;
 }
 
 .btn-dark {
     --color: #000
 }
 
+.btn-danger {
+    --color: #DC143C;
+}
+
+.btn-edit {
+    --color: #088F8F;
+}
+
 .custom-btn::before {
     position: absolute;
     content: "";
     background: var(--color);
-    width: 150px;
+    width: 300px;
     height: 200px;
     z-index: -1;
     border-radius: 50%;
 }
 
 .custom-btn:hover {
-    color: white;
+    color: #000;
 }
 
 .custom-btn:before {
     top: 100%;
     left: 100%;
-    transition: .3s all;
+    transition: .6s all;
 }
 
 .custom-btn:hover::before {
@@ -114,6 +110,6 @@
 
     .is-table th,
     .is-table td {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
