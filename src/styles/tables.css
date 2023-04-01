@@ -6,6 +6,7 @@
 }
 
 .is-table {
+    display: block;
     overflow: auto !important;
     font-size: 17px;
 }
