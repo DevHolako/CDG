@@ -1,24 +1,20 @@
 import React from "react";
 import PatientCard from "../../components/PatientCard";
-import "./styles/dashbord.css";
 import data from "../../Data/dock-data.json";
 import { columnes } from "../../Data/Recette";
-import RecetteMedecin from "../../components/RecetteMedecin";
+import CustomTable from "../../components/CustomTable";
+import "./styles/dashbord.css";
 
 //------------------------------------------//
 
 function Dashbord() {
   return (
     <div className="dashbord-container">
-      <section className="dashbord-item dashbord-section1">
-        <PatientCard method={"Ajouter"} />
-      </section>
-      <section className="dashbord-item  dashbord-section2 ">
-        <h2 className="title is-4 rece-title">RECETTE MEDECIN</h2>
-        <div className="medecin_container">
-          <RecetteMedecin inc_data={data} inc_cols={columnes} />
-        </div>
-      </section>
+      <PatientCard method={"ajouter"} />
+      <div className="bg section2">
+        <h2 className="title is-3">RECETTE MEDECIN</h2>
+        <CustomTable inc_data={data} inc_cols={columnes} isMedecin={true} />
+      </div>
     </div>
   );
 }

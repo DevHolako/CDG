@@ -1,11 +1,17 @@
 import React from "react";
-import SiedBar from "../components/SiedBar";
-function Layout({ children }) {
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
+import "../styles/arrow.css";
+function Layout() {
   return (
-    <div className="Layout">
-      <SiedBar />
-      <main>{children}</main>
-    </div>
+    <>
+      <header className="container">
+        <Header />
+      </header>
+      <main className="container ">
+        <Outlet />
+      </main>
+    </>
   );
 }
 

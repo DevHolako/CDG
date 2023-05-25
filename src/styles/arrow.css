@@ -1,0 +1,51 @@
+.arrows {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 1em auto;
+    max-width: min-content;
+}
+
+.scroll-rghit-arrow {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #000;
+    animation: scroll-rghit 1s ease infinite;
+}
+
+.scroll-left-arrow {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #000;
+    animation: scroll-left 1s ease infinite;
+}
+
+@keyframes scroll-rghit {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+}

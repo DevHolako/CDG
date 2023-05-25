@@ -1,17 +1,13 @@
-.patients-container {
+.pt-contanier {
+    padding: 2em;
 
-    display: grid;
-    gap: 2rem;
-    margin: 4rem 2rem 1rem 2rem;
 }
 
 
-@media (max-width:768px) {
-    .patients-container {
-        display: grid;
-        margin: 1rem;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr max-content;
+
+@media screen and (min-width:1200px) {
+
+    .pt-contanier {
+        align-items: center;
     }
 }

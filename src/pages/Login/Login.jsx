@@ -1,20 +1,30 @@
 import React from "react";
-import logo from "../../assets/centre-dentaire-logo.svg";
 import image from "../../assets/login.svg";
 import "./styles/login.css";
+import { useAtomValue } from "jotai";
+import { Role } from "../../App";
 import { useNavigate } from "react-router-dom";
+
 function Login() {
-  const GoTo = useNavigate();
+  const role = useAtomValue(Role);
+  const navto = useNavigate();
   const HandelLogin = () => {
-    GoTo("/receptionist");
+    switch (role) {
+      case "réceptionniste":
+        navto("/réceptionniste");
+        break;
+
+      default:
+        break;
+    }
   };
   return (
     <>
       <main className="main-login">
-        <section className="column login_section1">
+        <section className="column">
           <img src={image} alt="login svg" />
         </section>
-        <section className="column login_section2">
+        <section className="column login_card">
           <div className="field">
             <label className="label"> Login :</label>
             <div className="control">

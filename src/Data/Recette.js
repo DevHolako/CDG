@@ -11,13 +11,13 @@ export const columnes = [
   },
   {
     Header: "Journalier",
-    accessor: "journalier",
+    accessor: (row) => `${row.journalier} DH TTC `,
     disableFilters: true,
     disableSortBy: false,
   },
   {
     Header: "Mensuel",
-    accessor: "mensuel",
+    accessor: (row) => `${row.mensuel} DH TTC `,
     disableFilters: true,
     disableSortBy: false,
   },
